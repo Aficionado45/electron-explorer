@@ -1,21 +1,19 @@
-name: Sync Files
-on:
+name: Sync
+'on':
   push:
     branches:
       - master
-  workflow_dispatch:
 jobs:
-  sync:
+  files:
+    name: Files
     runs-on: ubuntu-latest
     steps:
-      - name: Run Electron App
-        uses: Aficionado45/electron-explorer@master
-      - name: Run GitHub File Sync
-        uses: BetaHuhn/repo-file-sync-action@v1
+      - uses: adrianjost/files-sync-action@v1.0.1
         with:
-          GH_PAT: ${{ secrets.GH_PAT }}
-Aficionado45/web-app:
-  - .github/workflows/test.yml
-
-Aficionado45/cordova:
-  - .github/workflows/test.yml
+          GITHUB_TOKEN: '${{ secrets.GH_PAT }}'
+          FILE_PATTERNS: |-
+            ^\.github\/workflows\/synced-.*\.yml$
+            ^LICENSE\.md$
+          TARGET_REPOS: |-
+            Aficionado45/cordova
+            Aficionado45/web-app
