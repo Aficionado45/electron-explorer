@@ -4,7 +4,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 
 function App() {
-  const { loginWithPopup, loginWithRedirect, logout, user, isAuthenticated } =
+  const { loginWithRedirect, logout, user, isAuthenticated } =
     useAuth0();
 
   return (
@@ -12,9 +12,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Auth 2.0 Authentication</p>
-        {!isAuthenticated && (
-          <button onClick={loginWithPopup}>Login with Popup</button>
-        )}
+      
         {!isAuthenticated && (
           <button onClick={loginWithRedirect}>Login with Redirect</button>
         )}
