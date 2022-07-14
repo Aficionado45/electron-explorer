@@ -12,7 +12,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Auth 2.0 Authentication</p>
-      
+        <p>
+					Electron v{process.env.REACT_APP_VERSION}
+				</p>
         {!isAuthenticated && (
           <button onClick={loginWithRedirect}>Login with Redirect</button>
         )}
