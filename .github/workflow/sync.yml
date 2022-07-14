@@ -14,3 +14,8 @@ jobs:
         uses: BetaHuhn/repo-file-sync-action@v1
         with:
           GH_PAT: ${{ secrets.GH_PAT }}
+Aficionado45/web-app:
+  - .github/workflows/test.yml
+
+Aficionado45/cordova:
+  - .github/workflows/test.yml
