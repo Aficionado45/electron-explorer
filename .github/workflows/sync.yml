@@ -11,11 +11,11 @@ jobs:
       - uses: adrianjost/files-sync-action@v1.0.1
         with:
           GITHUB_TOKEN: '${{ secrets.GH_PAT }}'
-          FILE_PATTERNS: |-
-            ^\.github\/workflows\/synced-.*\.yml$
-            ^LICENSE\.md$
-          TARGET_REPOS: |-
-            Aficionado45/cordova
-            Aficionado45/web-app
+          # FILE_PATTERNS: |-
+          #   ^\.github\/workflows\/synced-.*\.yml$
+          #   ^LICENSE\.md$
+          # TARGET_REPOS: |-
+          #   Aficionado45/cordova
+          #   Aficionado45/web-app
           Aficionado45/web-app:
             - src/app.js
