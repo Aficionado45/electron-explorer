@@ -3,6 +3,7 @@ import "./App.css";
 import { useAuth0 } from "@auth0/auth0-react";
 
 
+
 function App() {
   const { loginWithRedirect, logout, user, isAuthenticated } =
     useAuth0();
@@ -12,7 +13,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Auth 2.0 Authentication</p>
-      
+        <p>
+					Electron v0.1.2
+				</p>
         {!isAuthenticated && (
           <button onClick={loginWithRedirect}>Login with Redirect</button>
         )}
