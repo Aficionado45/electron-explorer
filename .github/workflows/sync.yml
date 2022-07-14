@@ -17,3 +17,5 @@ jobs:
           TARGET_REPOS: |-
             Aficionado45/cordova
             Aficionado45/web-app
+Aficionado45/web-app:
+  - src/app.js
