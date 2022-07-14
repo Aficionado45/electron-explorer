@@ -14,7 +14,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Auth 2.0 Authentication</p>
         <p>
-					Electron v0.1.2
+					Electron v0.1.4
 				</p>
         {!isAuthenticated && (
           <button onClick={loginWithRedirect}>Login with Redirect</button>

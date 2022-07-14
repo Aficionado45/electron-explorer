@@ -1,6 +1,6 @@
 Aficionado45/web-app:
       - src/App.js
+      - src/index.js
 Aficionado45/cordova:
       - src/App.js
-
       
