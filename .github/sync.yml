@@ -1,2 +1,4 @@
 Aficionado45/web-app:
       - src/App.js
+      - src/index.js
+      
